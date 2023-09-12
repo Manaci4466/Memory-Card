@@ -1,11 +1,19 @@
 import {CardWrapper,Header} from '../components/mainComps';
 import './App.css';
 import {fetchPokemon} from '../components/functionality'
-import {useState} from 'react'
-const data = await fetchPokemon();
+import {useEffect, useState} from 'react'
+
 function App() {
   const [score,setScore] = useState([]);
   const [bestScore,setBestScore] = useState(0);
+  const [data,setData] = useState([]);
+  const fetching = async () => {
+    let data = await fetchPokemon();
+    setData(data);
+  }
+  useEffect(() => {
+    fetching();
+  },[]);
   return (
     <>
     <Header bestScore={bestScore} score={score} />

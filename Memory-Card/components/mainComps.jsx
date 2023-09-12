@@ -2,6 +2,7 @@ import {Card,Caption,Img} from './auxComps'
 import {useEffect,useState} from 'react';
 import '../styles/style.css';
 import { randomSort,isWinOrLose } from './functionality';
+
 function CardWrapper({arr,setScore,score,setBestScore,bestScore}){
     let [arrange,setArrange] = useState(true);
     useEffect(() => {
