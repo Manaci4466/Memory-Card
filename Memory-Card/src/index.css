@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: darkcyan;
+}
+
+button {
+  border: none;
+}
+
+img {
+  object-fit: cover;
+  width: 90%;
+}

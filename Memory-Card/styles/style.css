@@ -1,0 +1,37 @@
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5,300px);
+    grid-template-rows: repeat(2,300px);
+    place-content: center;
+    gap: 10px;
+    padding: 30px;
+}
+
+header {
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    padding: 10px;
+    background: #2B2B2B;
+    box-shadow: 2px 4px 3px 2px rgba(245, 245, 245, 0.664);
+}
+header > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+button.card {
+    border-radius: 10px;
+    transition: transform 300ms ease-out 100ms;
+    box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, 0.699);
+}
+
+button.card:hover {
+    transform: scale(1.1) translateY(20px) ;
+    perspective: 500px;
+    
+}
+
+button.card div.card-content p span {
+    font-size: 1.4rem;
+}
